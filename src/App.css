@@ -1,11 +1,23 @@
-.App {
-  text-align: center;
+body{
+  padding-top: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.App {
+  
+  display: grid;
+  text-align: center;
+  background-color: #020062;
+  border: solid;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+  block-size: fit-content;
 }
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,26 +25,132 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.time svg{
+  float: right}
+.time{display: flexbox;
+  padding: 1rem;
+  padding-top: 2rem;
   color: white;
+  text-align: left;
+}
+.nums,.ops,.dec,.clr{
+  border: 3px ridge black; ;
+} 
+
+.display{
+  text-align: right;
+  color: white;
+margin:3rem 2rem;
+}
+.current{
+  letter-spacing: .2rem;
+  
+  font-size: 1.5rem;
+}
+.result{
+  height: 3rem;
+  font-size: 3.2rem;
+}
+.button {
+  background-color: #033e6e;
+  border: solid;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 30px;
+}
+.button:active{
+  
+  border-bottom: rgb(130, 198, 238);
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover{
+ background-color:rgb(2, 0, 128);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#keyboard{
+  display: grid;
+  margin: 0 auto;
+  background-color: #0366b8;
+  border: solid;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "ac ac ac mult"
+    "seven eight nine div"
+    "four five six sub"
+    "one two three add"
+    "zero dec equ equ ";
+ gap: 0.5rem;
+ 
 }
+
+#zero{
+  grid-area:zero;
+ }
+
+#one{
+  grid-area:one;
+ }
+ #two{
+  grid-area:two;
+}
+
+#three{
+  grid-area:three;
+ }
+#four{
+  grid-area: four;
+}
+#five{
+  grid-area: five;
+}
+#six{
+  grid-area: six;
+}
+#seven{
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#add {
+  grid-area:add;
+}
+
+#substract{
+  grid-area:sub;
+}
+
+#multiply{
+  grid-area:mult;
+}
+#divide{
+  grid-area:div;
+}
+
+#decimal{
+  grid-area:dec;
+}
+
+#clear{
+  grid-area:ac;
+}
+#equals{
+  grid-area:equ;
+}
+
+
